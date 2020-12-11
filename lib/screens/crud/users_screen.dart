@@ -38,6 +38,12 @@ class UsersScreen extends StatelessWidget {
                 errorText: bloc.errors['document'],
               ),
             ),
+            if (bloc.isLoading)
+              SizedBox(
+                width: 70,
+                height: 70,
+                child: CircularProgressIndicator(),
+              )
           ]),
         );
       }),
