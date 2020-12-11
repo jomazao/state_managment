@@ -17,19 +17,25 @@ class UsersScreen extends StatelessWidget {
             onPressed: bloc.createUser,
           ),
           body: Column(children: [
-            TextFormField(
+            TextField(
+              controller: bloc.nameController,
               decoration: InputDecoration(
                 hintText: 'Digite su nombre',
+                errorText: bloc.errors['name'],
               ),
             ),
             TextField(
+              controller: bloc.lastNameController,
               decoration: InputDecoration(
                 hintText: 'Digite su apellido',
+                errorText: bloc.errors['lastName'],
               ),
             ),
             TextField(
+              controller: bloc.documentController,
               decoration: InputDecoration(
                 hintText: 'Digite su documento',
+                errorText: bloc.errors['document'],
               ),
             ),
           ]),
