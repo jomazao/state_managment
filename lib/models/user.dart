@@ -4,6 +4,10 @@ class User {
   String document;
   String documentId;
 
+  String get fullName {
+    return '$name $lastName';
+  }
+
   User({
     this.name,
     this.lastName,
